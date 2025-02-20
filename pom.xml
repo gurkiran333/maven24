@@ -126,10 +126,10 @@
         <version>2.2</version>
       </dependency>
 
-      <dependency>
+	  <dependency>
         <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.13.2</version>
+        <artifactId>junit-dep</artifactId>
+        <version>4.12</version> <!-- or any stable version -->
         <scope>test</scope>
       </dependency>
 
@@ -164,4 +164,3 @@
   </scm>
 
 </project>
-
