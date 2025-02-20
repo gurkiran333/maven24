@@ -16,30 +16,40 @@
   <description>Webapp.</description>
 
   <build>
-    <finalName>${project.artifactId}</finalName>
-
-    <plugins>
-      <plugin>
-         <groupId>org.eclipse.jetty</groupId>
-         <artifactId>jetty-maven-plugin</artifactId>
-         <version>11.0.15</version>
-      </plugin>
-    </plugins>
-  </build>
+  <finalName>${project.artifactId}</finalName>
+  <plugins>
+    <plugin>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-maven-plugin</artifactId>
+      <version>11.0.15</version>
+      <configuration>
+        <httpConnector>
+          <port>9090</port>  <!-- Change port if needed -->
+        </httpConnector>
+        <webApp>
+          <contextPath>/webapp</contextPath>
+        </webApp>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
 
   <dependencies>
 
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
+  <groupId>jakarta.servlet</groupId>
+  <artifactId>jakarta.servlet-api</artifactId>
+  <version>5.0.0</version>
+  <scope>provided</scope>
+</dependency>
 
-    <dependency>
-      <groupId>javax.servlet.jsp</groupId>
-      <artifactId>jsp-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
+<dependency>
+  <groupId>jakarta.servlet.jsp</groupId>
+  <artifactId>jakarta.servlet.jsp-api</artifactId>
+  <version>3.0.0</version>
+  <scope>provided</scope>
+</dependency>
+
   </dependencies>
 
 </project>
