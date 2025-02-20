@@ -19,12 +19,12 @@
     <finalName>${project.artifactId}</finalName>
   </build>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit-dep</artifactId>
-      <scope>test</scope>
-    </dependency>
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>  <!-- Latest stable version -->
+    <scope>test</scope>
+</dependency>
 
     <dependency>
       <groupId>org.hamcrest</groupId>
